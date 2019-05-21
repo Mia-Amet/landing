@@ -1,0 +1,124 @@
+.container-fluid {
+  margin: 0;
+  padding: 20px 60px;
+  min-height: 60px;
+  background: transparent;
+}
+
+.color-white {
+  color: white;
+  fill: white;
+}
+
+.color-dark {
+  color: #192a2c;
+  fill: #192a2c;
+}
+
+.stroke-white {
+  stroke: white;
+}
+
+.stroke-dark {
+  stroke: #192a2c;
+}
+
+.logo {
+  width: 109px;
+  height: 35px;
+  top: -4px;
+}
+
+.nav-link, #lang, .outline-button span {
+  font: 700 1em/150% "Raleway", "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.nav-link, .outline-button span {
+  margin-top: 1px;
+}
+
+.nav-link {
+  margin: 2px 14px 0;
+  transition: all 0.1s ease-out;
+}
+.nav-link:hover {
+  color: #00BAB1;
+  transition: all 0.1s ease-in;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  left: 10%;
+  width: 0;
+  background-color: white;
+  height: 3px;
+  transition: width 0.4s ease, background-color 0.2s ease;
+}
+
+.nav-item:hover::before {
+  content: "";
+  background-color: #00BAB1;
+  left: 10%;
+  width: 80%;
+}
+
+.nav-item:hover .nav-link {
+  color: #00BAB1;
+}
+
+.outline-button {
+  outline: none;
+  background: none;
+  height: 64px;
+}
+.outline-button span {
+  transition: color 0.4s ease;
+}
+.outline-button svg rect {
+  stroke-width: 3;
+  stroke-dasharray: 353, 0;
+  stroke-dashoffset: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.outline-button:hover span {
+  color: #00BAB1;
+}
+.outline-button:hover svg rect {
+  stroke: #00BAB1;
+  stroke-width: 3;
+  stroke-dasharray: 140, 530;
+  stroke-dashoffset: 437;
+}
+
+.chevron-wrapper {
+  pointer-events: none;
+}
+.chevron-wrapper .chevron, .chevron-wrapper #lang {
+  transition: all 0.2s ease-out;
+}
+.chevron-wrapper .chevron {
+  right: 10px;
+}
+.chevron-wrapper #lang {
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  pointer-events: all;
+  height: 22px;
+  box-sizing: content-box;
+}
+.chevron-wrapper:hover .chevron, .chevron-wrapper:hover #lang {
+  transition: all 0.2s ease-in;
+}
+.chevron-wrapper:hover .chevron {
+  fill: #00BAB1;
+}
+.chevron-wrapper:hover #lang {
+  color: #00BAB1;
+}
+
+/*# sourceMappingURL=menu.component.css.map */

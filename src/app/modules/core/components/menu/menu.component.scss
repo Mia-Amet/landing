@@ -1,0 +1,127 @@
+.container-fluid {
+  margin: 0;
+  padding: 20px 60px;
+  min-height: 60px;
+  background: transparent;
+}
+
+.color-white {
+  color: white;
+  fill: white;
+}
+
+.color-dark {
+  color: #192a2c;
+  fill: #192a2c;
+}
+
+.stroke-white {
+  stroke: white;
+}
+
+.stroke-dark {
+  stroke: #192a2c;
+}
+
+.logo {
+  width: 109px;
+  height: 35px;
+  top: -4px;
+}
+
+.nav-link, #lang, .outline-button span {
+  font: 700 1em/150% 'Raleway', 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.nav-link, .outline-button span {
+  margin-top: 1px;
+}
+
+.nav-link {
+  margin: 2px 14px 0;
+  transition: all .1s ease-out;
+  &:hover {
+    color: #00BAB1;
+    transition: all .1s ease-in;
+  }
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: 16px;
+  left: 10%;
+  width: 0;
+  background-color: white;
+  height: 3px;
+  transition: width .4s ease, background-color .2s ease;
+}
+
+.nav-item:hover::before {
+  content: '';
+  background-color: #00BAB1;
+  left: 10%;
+  width: 80%;
+}
+
+.nav-item:hover .nav-link {
+  color: #00BAB1;
+}
+
+.outline-button {
+  outline: none;
+  background: none;
+  height: 64px;
+  span {
+    transition: color .4s ease;
+  }
+  svg rect {
+    stroke-width: 3;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  &:hover {
+    span {
+      color: #00BAB1;
+    }
+    svg rect {
+      stroke: #00BAB1;
+      stroke-width: 3;
+      stroke-dasharray: 140, 530;
+      stroke-dashoffset: 437;
+    }
+  }
+}
+
+.chevron-wrapper {
+  pointer-events: none;
+  .chevron, #lang {
+    transition: all .2s ease-out;
+  }
+  .chevron {
+    right: 10px;
+  }
+  #lang {
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    pointer-events: all;
+    height: 22px;
+    box-sizing: content-box;
+  }
+  &:hover {
+    .chevron, #lang {
+      transition: all .2s ease-in;
+    }
+    .chevron {
+      fill: #00BAB1;
+    }
+    #lang {
+      color: #00BAB1;
+    }
+  }
+}
+

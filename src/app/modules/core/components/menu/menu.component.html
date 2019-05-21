@@ -1,0 +1,63 @@
+<div class="container-fluid d-flex align-items-center justify-content-between">
+  <div [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" class="logo">
+    <a routerLink="/" class="nav-brand">
+      <svg [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 557.43 178.93">
+        <path d="M27.88,224.35H1.57V50.68H27.88V95.31Q46.2,82.26,70,82.26q30.51,0,52.1,21.57t21.57,52.11q0,30.52-21.57,52.1T70,229.62q-23.8,0-42.11-13.06Zm8.63-34.94A45.65,45.65,0,0,0,70,203.3a45.64,45.64,0,0,0,33.47-13.89,47.28,47.28,0,0,0,0-66.95A45.64,45.64,0,0,0,70,108.57a45.65,45.65,0,0,0-33.48,13.89A48.93,48.93,0,0,0,27.88,134v43.79A48.93,48.93,0,0,0,36.51,189.41Z"
+              transform="translate(-1.57 -50.68)"/>
+        <path d="M250,181.83V87.52h26.32v137H250v-5.47q-16.2,10.53-36.84,10.53-28.41,0-48.41-20t-20-48.42V87.52h26.31V161.2a42,42,0,0,0,42.1,42.1,40.42,40.42,0,0,0,29.69-12.21A43.3,43.3,0,0,0,250,181.83Z"
+              transform="translate(-1.57 -50.68)"/>
+        <path d="M298.53,195.93q17.69,7.38,32.63,7.37,14.73,0,22.63-4.21t7.9-10.74a13.7,13.7,0,0,0-3.9-9.78,21.24,21.24,0,0,0-10.42-5.79L319,165.2q-16.84-4.42-26.1-15.16t-9.26-25.89q0-17.27,13.68-29.37t35.58-12.52a88.62,88.62,0,0,1,51.78,16.42l-17.47,20q-17.27-10.11-33.89-10.11-10.53.21-16.84,4.74t-6.32,11a11.78,11.78,0,0,0,4.32,9.37q4.31,3.68,12.1,6l29.47,8q15.17,4,24.11,14.63t8.95,26.42q0,17.47-14.22,29.15t-43.47,11.69q-24.21,0-49-12.85Z"
+              transform="translate(-1.57 -50.68)"/>
+        <path d="M399.83,195.93q17.69,7.38,32.63,7.37,14.73,0,22.63-4.21t7.9-10.74a13.7,13.7,0,0,0-3.9-9.78,21.28,21.28,0,0,0-10.42-5.79l-28.42-7.58q-16.85-4.42-26.1-15.16t-9.26-25.89q0-17.27,13.68-29.37t35.58-12.52a88.65,88.65,0,0,1,51.78,16.42l-17.47,20q-17.26-10.11-33.89-10.11-10.53.21-16.84,4.74t-6.32,11a11.78,11.78,0,0,0,4.32,9.37q4.31,3.68,12.1,6l29.47,8q15.17,4,24.11,14.63t8.94,26.42q0,17.47-14.21,29.15t-43.47,11.69q-24.21,0-49.05-12.85Z"
+              transform="translate(-1.57 -50.68)"/>
+        <path d="M522.16,130v94.31H495.85v-137h26.31v5.47Q538.38,82.26,559,82.26v26.31a40.4,40.4,0,0,0-29.68,12.21A43.28,43.28,0,0,0,522.16,130Z"
+              transform="translate(-1.57 -50.68)"/>
+      </svg>
+    </a>
+    <!-- /.nav-brand -->
+  </div>
+  <!-- /.logo -->
+  <div class="d-flex">
+    <ul class="nav">
+      <li class="nav-item d-flex align-items-center">
+        <a href="#" [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" class="nav-link p-0">Our App</a>
+      </li>
+      <!-- /.nav-item -->
+      <li class="nav-item d-flex align-items-center">
+        <a href="#" [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" class="nav-link p-0">Why Bussr</a>
+      </li>
+      <!-- /.nav-item -->
+      <li class="nav-item d-flex align-items-center">
+        <a href="#" [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" class="nav-link p-0">How It Works</a>
+      </li>
+      <!-- /.nav-item -->
+      <li class="nav-item d-flex align-items-center">
+        <a href="#" [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" class="nav-link p-0">Trips</a>
+      </li>
+      <!-- /.nav-item -->
+    </ul>
+    <!-- /.nav -->
+    <button (click)="navigateToDrivers()" class="outline-button p-0 ml-5 border-0 d-flex align-items-center justify-content-center">
+      <svg width="208" height="62">
+        <rect [ngClass]="(currentUrl | async)?.length ? 'stroke-dark' : 'stroke-white'" x="4" y="6" rx="25" fill="none" width="200" height="50"></rect>
+      </svg>
+      <span [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" class="position-absolute">Become a Driver</span>
+    </button>
+    <!-- /.btn.btn-primary -->
+    <div class="p-0 ml-3 d-flex align-items-center chevron-wrapper">
+      <select [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" id="lang" class="p-3 border-0 align-self-center m-0">
+        <option *ngFor="let lang of languages" [value]="lang">{{ lang | uppercase }}</option>
+      </select>
+      <!-- /#lang -->
+      <div class="chevron ml-0">
+        <svg [ngClass]="(currentUrl | async)?.length ? 'color-dark' : 'color-white'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" height="10" width="10">
+          <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093 "/>
+        </svg>
+      </div>
+      <!-- /.chevron -->
+    </div>
+    <!-- /.chevron-wrapper -->
+  </div>
+  <!-- /.navigation -->
+</div>
+<!-- /.container-fluid -->
