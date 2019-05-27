@@ -5,6 +5,10 @@
   height: 100% !important;
 }
 
+#video-bg {
+  position: relative;
+}
+
 #overlay {
   opacity: .2;
   z-index: 5;
