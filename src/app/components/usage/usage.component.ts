@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-usage',
@@ -15,6 +15,11 @@ export class UsageComponent implements OnInit, OnDestroy {
     'Choose the most suitable option from the list of available.',
     'Book your ride, hop in, and relax.'
   ];
+  links: string[] = [
+    'https://i.ibb.co/4wb5n6m/slide-1.png',
+    'https://i.ibb.co/FYTC5kK/slide-2.png',
+    'https://i.ibb.co/LvMjHJT/slide-3.png'
+  ];
   currentSlide: number = 0;
   interval: number;
 
@@ -26,10 +31,6 @@ export class UsageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     clearInterval(this.interval);
-  }
-
-  getSlideUrl(i: number): string {
-    return `../../../assets/resources/slide-${ i + 1 }.png`;
   }
 
   slideNext() {

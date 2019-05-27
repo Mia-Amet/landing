@@ -36,11 +36,11 @@
   <!-- /.card -->
   
   <div class="slider d-flex align-items-start w-100 justify-content-center position-absolute">
-    <div class="slide-wrapper position-absolute" *ngFor="let step of steps; let i = index">
+    <div class="slide-wrapper position-absolute" *ngFor="let link of links; let i = index">
       <img [ngClass]="{ 'active': currentSlide === i }" class="slide" width="262"
-           [src]="getSlideUrl(i)" [alt]="steps[currentSlide]">
+           [src]="link" [alt]="steps[currentSlide]">
     </div>
-    <img class="slider-placeholder" src="../../../assets/resources/screen-empty.png" width="500" alt="How does bussr work?">
+    <img class="slider-placeholder" src="https://i.ibb.co/rpNQ9LJ/screen-empty.png" width="500" alt="How does bussr work?">
     
     <div class="slider-controls position-absolute d-flex justify-content-between align-items-center">
       <button class="mr-2 prev-btn bg-transparent border-0" (click)="slidePrev()">
