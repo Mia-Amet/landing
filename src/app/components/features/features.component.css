@@ -31,7 +31,7 @@ svg:last-of-type {
   z-index: -5;
   width: 27.777778%;
   height: 100%;
-  background: url("../../../assets/resources/bus.png") left -80px no-repeat;
+  background: url("~src/assets/resources/bus.png") left -80px no-repeat;
   background-size: 819px 592px;
 }
 

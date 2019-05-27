@@ -32,7 +32,7 @@ p {
   left: 0;
 }
 .card .poster {
-  background: url("../../../assets/resources/video-preview.png") center no-repeat;
+  background: url("~src/assets/resources/video-preview.png") center no-repeat;
   background-size: 1224px auto;
 }
 .card .poster .play-btn {
@@ -58,7 +58,7 @@ p {
   height: 500px;
 }
 .container-fluid .bg {
-  background: rgba(85, 192, 204, 0.75) url("https://drive.google.com/open?id=1NHllRQolyF8xJxjQ2koTOpndv9h1mvNj") center no-repeat;
+  background: rgba(85, 192, 204, 0.75) url("~src/assets/resources/644208-POO4RH-441.jpg") center no-repeat;
   background-size: 1560px 1040px;
   background-blend-mode: lighten;
   width: 100%;
