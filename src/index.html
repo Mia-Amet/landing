@@ -13,7 +13,9 @@
 
   <script>
     setTimeout(() => {
-      document.querySelector('video').play();
+      var video = document.querySelector('video');
+      video.muted = true;
+      video.play();
     }, 10);
   </script>
 </body>
