@@ -1,0 +1,38 @@
+h1 {
+  font: 800 5em/100% "Montserrat", "Poppins", sans-serif;
+  color: #282e3c;
+}
+
+p {
+  font: 400 1.4em/180% "Poppins", "Montserrat", sans-serif;
+  color: #26444b;
+}
+
+svg {
+  fill: #D3E8E3;
+  top: -50px;
+  left: -20px;
+}
+svg:last-of-type {
+  left: -30px;
+}
+
+.container-fluid {
+  background-color: rgba(182, 197, 200, 0.15);
+  padding: 180px 60px;
+}
+.container-fluid .wrapper {
+  width: 78%;
+}
+
+.feature-1 {
+  right: 0;
+  top: 0;
+  z-index: -5;
+  width: 27.777778%;
+  height: 100%;
+  background: url("../../../assets/resources/bus.png") left -80px no-repeat;
+  background-size: 819px 592px;
+}
+
+/*# sourceMappingURL=features.component.css.map */

@@ -1,0 +1,148 @@
+.container-fluid {
+  padding: 20px 60px;
+  height: 100px;
+  width: 100vw;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.navbar-logo {
+  width: 109px;
+  height: 35px;
+  top: -4px;
+}
+
+.navbar-logo svg, .chevron {
+  fill: white;
+}
+
+#lang, .nav-link, .outline-btn span {
+  font: 700 1.4em/100% "Raleway", "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-item .nav-link {
+  margin: 0 14px;
+  transition: all 0.1s ease-out;
+  padding: 10px 0;
+}
+.nav-item .nav-link:hover, .nav-item .nav-link.active {
+  color: #78CFC3;
+}
+.nav-item:before {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  left: 10%;
+  width: 0;
+  background-color: white;
+  height: 3px;
+  transition: width 0.4s ease, background-color 0.2s ease;
+}
+.nav-item:hover .nav-link {
+  color: #78CFC3;
+}
+.nav-item:hover:before {
+  content: "";
+  background-color: #78CFC3;
+  width: 80%;
+}
+
+.outline-btn {
+  overflow: hidden;
+  outline: none;
+  background: none;
+  border: 3px solid white;
+  border-radius: 60px;
+  z-index: 1;
+  padding: 0 20px;
+  transition: border 0.3s 0.15s cubic-bezier(0.16, 0.73, 0.58, 0.62);
+}
+.outline-btn span {
+  z-index: 100;
+}
+.outline-btn:before, .outline-btn:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.outline-btn:before {
+  transform: translate3d(-100%, 0, 0);
+  background-color: white;
+  border: 3px solid white;
+  transition: transform 0.3s cubic-bezier(0.25, 0.81, 0.64, 0.9);
+}
+.outline-btn:after {
+  background-color: #78CFC3;
+  border: 3px solid #78CFC3;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.2s 0.1s cubic-bezier(0.16, 0.73, 0.58, 0.62);
+}
+.outline-btn:hover {
+  border: 3px solid #78CFC3;
+}
+.outline-btn:hover:before {
+  transform: translate3d(0, 0, 0);
+}
+.outline-btn:hover:after {
+  transform: translate3d(0, 0, 0);
+}
+
+.select-wrapper {
+  pointer-events: none;
+  box-sizing: content-box;
+}
+.select-wrapper #lang {
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  pointer-events: all;
+  height: 20px;
+  box-sizing: content-box;
+}
+.select-wrapper .chevron {
+  right: 10px;
+}
+.select-wrapper:hover .chevron svg, .select-wrapper:hover #lang {
+  transition: all 0.2s ease-in;
+}
+.select-wrapper:hover .chevron svg {
+  fill: #78CFC3;
+}
+.select-wrapper:hover #lang {
+  color: #78CFC3;
+}
+
+.bg-visible {
+  background: white !important;
+  transition: all 0.1s ease;
+}
+.bg-visible #lang, .bg-visible .nav-link, .bg-visible .outline-btn span {
+  color: #252f36;
+}
+.bg-visible .outline-btn {
+  border-color: #252f36;
+}
+.bg-visible .outline-btn:before {
+  background-color: #252f36;
+  border-color: #252f36;
+}
+.bg-visible .outline-btn:hover {
+  border-color: #78CFC3;
+}
+.bg-visible .navbar-logo svg {
+  fill: #78CFC3;
+}
+.bg-visible .chevron {
+  fill: #252f36;
+}
+
+/*# sourceMappingURL=navbar.component.css.map */

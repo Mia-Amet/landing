@@ -1,0 +1,53 @@
+<div class="container-fluid d-flex flex-row-reverse m-0 p-0">
+  <div class="intro mb-3">
+    <h1 class="mt-5">the future of transportation</h1>
+    <div class="cols-wrapper d-flex mt-5">
+      <p class="ml-2 mr-5">
+        <span>Bussr</span> is a reasonable, innovative and affordable solution to your daily traffic difficulties.
+        It's a way more comfortable alternative to the public transportation in Southeast Asia.
+      </p>
+      <p class="ml-2">
+        With <span>bussr</span> you can easily find specific routes and book seats in a top quality, air-conditioned buses
+        in a single tap just whenever you need. Our technology makes travel much quicker and safer than ever before.
+      </p>
+    </div>
+    
+    <h4 class="mt-5 ml-1 mb-0">Install the app, and start enjoying your rides</h4>
+    <div class="download mt-1 d-flex align-items-center">
+      <a
+        class="google-btn"
+        href="https://play.google.com/store/apps/details?id=com.bussr.passenger&hl=en"
+        target="_blank">
+        <img
+          src="https://static.wixstatic.com/media/325208_429628be33c94cbeb3af38e0e4dba522~mv2.png/v1/fill/w_360,h_136,al_c,q_80,usm_0.66_1.00_0.01/5a902dbf7f96951c82922875.webp"
+          alt="Download at the GooglePlay" width="180" height="60">
+      </a>
+      <a
+        class="apple-btn"
+        href="https://play.google.com/store/apps/details?id=com.bussr.passenger&hl=en"
+        target="_blank">
+        <img
+          src="https://images.ctfassets.net/oqn5qhpsy9i3/N4a5Co3EacOoa8wEkWqKK/6e5473e99e0f5a687cd9d60ac12777d4/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+          alt="Download at the AppStore" width="140">
+      </a>
+    </div>
+    <!-- /.download-wrapper -->
+  </div>
+  <!-- /.intro -->
+</div>
+<!-- /.container-fluid -->
+
+<on-scroll #s="onscroll"></on-scroll>
+
+<div class="iphone-sm position-absolute">
+  <img src="../../../assets/resources/screen-2-blured.png" alt="app-preview" width="360">
+</div>
+<!-- /.iphone-2 -->
+
+<div @slide *ngIf="s.scroll | async" class="iphone-xl position-absolute">
+  <div>
+    <img src="../../../assets/resources/screen-1.png" alt="app-preview" width="500">
+  </div>
+</div>
+<!-- /.iphone -->
+

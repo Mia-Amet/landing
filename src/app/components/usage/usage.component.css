@@ -1,0 +1,138 @@
+h1 {
+  font: 800 5.4em/100% "Montserrat", "Poppins", sans-serif;
+}
+
+h4 {
+  font: 600 2.4em/100% "Montserrat", "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font: 400 1.4em/180% "Poppins", "Montserrat", sans-serif;
+}
+
+.card {
+  width: 85%;
+  height: max-content;
+  overflow: hidden;
+  margin: 260px auto 120px;
+}
+.card .video-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.card iframe, .card .poster {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.card .poster {
+  background: url("../../../assets/resources/video-preview.png") center no-repeat;
+  background-size: 1224px auto;
+}
+.card .poster .play-btn {
+  outline: none;
+  padding: 10px;
+  top: 88%;
+  left: 2%;
+  transform-origin: center;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease-in-out;
+}
+.card .poster .play-btn:hover {
+  padding: 6px;
+}
+
+.container-fluid {
+  background-color: rgba(182, 197, 200, 0.15);
+}
+.container-fluid .content-container {
+  padding: 0 110px;
+  width: 100%;
+  height: 500px;
+}
+.container-fluid .bg {
+  background: rgba(85, 192, 204, 0.75) url("../../../assets/resources/644208-POO4RH-441.jpg") center no-repeat;
+  background-size: 1560px 1040px;
+  background-blend-mode: lighten;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+}
+.container-fluid .side-left, .container-fluid .side-right {
+  width: 32%;
+}
+.container-fluid .slider {
+  top: 0;
+  pointer-events: none;
+  margin-top: 4rem;
+}
+.container-fluid .slider .slide-wrapper {
+  overflow: hidden;
+  padding-top: 14px;
+}
+.container-fluid .slider .slide-wrapper .slide {
+  opacity: 0;
+}
+.container-fluid .slider .slide-wrapper .slide.active {
+  opacity: 1;
+}
+.container-fluid .slider .slider-controls {
+  bottom: 22%;
+  pointer-events: all;
+  width: 32%;
+}
+
+.link-btn {
+  outline: none;
+  padding: 10px 0;
+  width: max-content;
+  text-transform: uppercase;
+  font: 700 1.4em/100% "Raleway", "Montserrat", sans-serif;
+  transition: all 0.1s ease-out;
+}
+.link-btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: white;
+  height: 3px;
+  transition: width 0.4s ease, background-color 0.2s ease;
+}
+.link-btn:hover:before {
+  content: "";
+  background-color: white;
+  width: 100%;
+}
+
+.divider {
+  width: 100%;
+  height: 4px;
+  background: white;
+  margin: 10px 0;
+}
+
+.prev-btn, .next-btn {
+  outline: none;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.prev-btn:hover, .next-btn:hover {
+  transform: scale(1.2);
+}
+
+.step-container {
+  opacity: 1;
+  height: 100px;
+}
+
+/*# sourceMappingURL=usage.component.css.map */
