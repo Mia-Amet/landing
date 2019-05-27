@@ -1,58 +1,86 @@
-<div class="container-fluid m-0 p-0 d-flex justify-content-between align-items-center">
-  <div class="side-left d-flex flex-column">
-    <h1 class="text-white mb-5">how does bussr work?</h1>
-    <p class="text-white">We did our best making it simple and clean. Peace of mind is designed into your experience.</p>
-    <p class="text-white">Get 24/7 support in the app for any questions or safety concerns you might have.</p>
-    <button class="link-btn text-white bg-transparent border-0">
-      Sign Up for a Ride
-      <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 199.405 199.405" >
+<div class="container-fluid m-0 d-flex flex-column p-0">
+  <div class="bg position-absolute"></div>
+  <!-- /.bg -->
+  
+  <div class="content-container m-0 d-flex justify-content-between align-items-center">
+    <div class="side-left d-flex flex-column">
+      <h1 class="text-white mb-5">how does bussr work?</h1>
+      <p class="text-white">We did our best making it simple and clean. Peace of mind is designed into your experience.</p>
+      <p class="text-white">Get 24/7 support in the app for any questions or safety concerns you might have.</p>
+    </div>
+    <!-- /.side-left -->
+    
+    <div class="side-right h-100 d-flex flex-column justify-content-center">
+      <div class="step" *ngFor="let step of steps; let i = index">
+        <div class="step-container" *ngIf="currentSlide === i">
+          <h4 class="text-white">step {{ i + 1 }}</h4>
+          <div class="divider"></div>
+          <!-- /.divider -->
+          <p class="text-white">{{ step }}</p>
+        </div>
+      </div>
+      <!-- /.step -->
+      <button class="link-btn text-white bg-transparent border-0">Sign Up for a Ride</button>
+    </div>
+    <!-- /.side-right -->
+  </div>
+  <!-- /.container -->
+  
+  <div class="card border-0 p-0 rounded-0 bg-light">
+    <div class="video-container">
+      <iframe *ngIf="playEvent; else poster" src="https://www.youtube.com/embed/78nZiXTamYE" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- /.video-container -->
+  </div>
+  <!-- /.card -->
+  
+  <div class="slider d-flex align-items-start w-100 justify-content-center position-absolute">
+    <div class="slide-wrapper position-absolute" *ngFor="let step of steps; let i = index">
+      <img [ngClass]="{ 'active': currentSlide === i }" class="slide" width="262"
+           [src]="getSlideUrl(i)" [alt]="steps[currentSlide]">
+    </div>
+    <img class="slider-placeholder" src="../../../assets/resources/screen-empty.png" width="500" alt="How does bussr work?">
+    
+    <div class="slider-controls position-absolute d-flex justify-content-between align-items-center">
+      <button class="mr-2 prev-btn bg-transparent border-0" (click)="slidePrev()">
+        <svg fill="rgb(33, 38, 41)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 199.404 199.404">
+          <g>
+            <polygon points="199.404,81.529 74.742,81.529 127.987,28.285 99.701,0 0,99.702 99.701,199.404 127.987,171.119 74.742,117.876 199.404,117.876 	"/>
+          </g>
+        </svg >
+      </button>
+      <button class="ml-2 next-btn bg-transparent border-0" (click)="slideNext()">
+        <svg fill="rgb(33, 38, 41)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 199.405 199.405" >
+          <g>
+            <polygon points="99.703,199.405 199.405,99.702 99.703,0 71.418,28.285 124.662,81.529 0,81.529 0,117.876 124.662,117.876 71.418,171.12 	"/>
+          </g>
+        </svg >
+      </button>
+    </div>
+    <!-- /.slider-controls -->
+  </div>
+  <!-- /.slider -->
+</div>
+<!-- /.container-fluid -->
+
+<ng-template #poster>
+  <div class="poster">
+    <button class="play-btn border-0 bg-transparent position-absolute" (click)="playEvent = true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff">
         <g>
-          <polygon points="99.703,199.405 199.405,99.702 99.703,0 71.418,28.285 124.662,81.529 0,81.529 0,117.876 124.662,117.876 71.418,171.12 	"/>
+          <path d="M437.02,74.98C388.667,26.629,324.38,0,256,0S123.333,26.629,74.98,74.98C26.629,123.333,0,187.62,0,256
+			s26.629,132.667,74.98,181.02C123.333,485.371,187.62,512,256,512s132.667-26.629,181.02-74.98
+			C485.371,388.667,512,324.38,512,256S485.371,123.333,437.02,74.98z M415.806,415.806C373.12,458.492,316.367,482,256,482
+			s-117.12-23.508-159.806-66.194C53.508,373.12,30,316.367,30,256S53.508,138.88,96.194,96.194C138.88,53.508,195.633,30,256,30
+			s117.12,23.508,159.806,66.194C458.492,138.88,482,195.633,482,256S458.492,373.12,415.806,415.806z"/>
+        </g>
+        <g>
+          <path d="M175.151,125.198v261.604L401.707,256L175.151,125.198z M205.152,177.161L341.707,256l-136.555,78.84V177.161z"/>
         </g>
       </svg>
     </button>
   </div>
-  <!-- /.side-left -->
-  
-  <div class="slider d-flex align-items-start justify-content-center">
-    <div class="slide-wrapper position-absolute" *ngFor="let step of steps; let i = index">
-      <img [ngClass]="{ 'active': currentSlide === i }" class="slide" width="314"
-           [src]="getSlideUrl(i)" [alt]="steps[currentSlide]">
-    </div>
-    <img class="slider-placeholder" src="../../../assets/resources/screen-empty.png" width="500" alt="How does bussr work?">
-  </div>
-  <!-- /.slider -->
-  
-  <div class="side-right d-flex flex-column justify-content-between">
-    <div class="step" *ngFor="let step of steps; let i = index">
-      <div class="step-container" *ngIf="currentSlide === i">
-        <h4 class="text-white">step {{ i + 1 }}</h4>
-        <div class="divider"></div>
-        <!-- /.divider -->
-        <p class="text-white">{{ step }}</p>
-        
-        <div class="slider-controls mt-5">
-          <button class="mr-2 prev-btn bg-transparent border-0" (click)="slidePrev()">
-            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 199.404 199.404">
-              <g>
-                <polygon points="199.404,81.529 74.742,81.529 127.987,28.285 99.701,0 0,99.702 99.701,199.404 127.987,171.119 74.742,117.876 199.404,117.876 	"/>
-              </g>
-            </svg >
-          </button>
-          <button class="ml-2 next-btn bg-transparent border-0" (click)="slideNext()">
-            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 199.405 199.405" >
-              <g>
-                <polygon points="99.703,199.405 199.405,99.702 99.703,0 71.418,28.285 124.662,81.529 0,81.529 0,117.876 124.662,117.876 71.418,171.12 	"/>
-              </g>
-            </svg >
-          </button>
-        </div>
-        <!-- /.slider-controls -->
-      </div>
-    </div>
-    <!-- /.step -->
-  </div>
-  <!-- /.side-right -->
-  
-</div>
-<!-- /.container-fluid -->
+  <!-- /.poster -->
+</ng-template>
+

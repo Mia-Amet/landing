@@ -58,6 +58,7 @@
   background: none;
   border: 3px solid white;
   border-radius: 60px;
+  z-index: 1;
   padding: 0 20px;
   transition: border 0.3s 0.15s cubic-bezier(0.16, 0.73, 0.58, 0.62);
 }

@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
       <app-intro id="intro"></app-intro>
       <app-features id="features"></app-features>
       <app-usage id="usage"></app-usage>
-      <app-estimate id="estimate"></app-estimate>
+      <app-subscribe></app-subscribe>
     </div>
     <!-- /.container-fluid -->
   `,

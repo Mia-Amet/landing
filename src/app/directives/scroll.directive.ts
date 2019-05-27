@@ -8,7 +8,7 @@ import { distinctUntilChanged } from 'rxjs/operators';
   exportAs: 'onscroll'
 })
 export class ScrollDirective {
-  private _sections: string[] = [ 'intro', 'features', 'usage', 'estimate' ];
+  private _sections: string[] = [ 'intro', 'features', 'usage' ];
 
   private scrollState: BehaviorSubject<boolean> = new BehaviorSubject(false);
   scroll: Observable<boolean> = this.scrollState.asObservable().pipe(

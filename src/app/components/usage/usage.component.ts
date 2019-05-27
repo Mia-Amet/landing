@@ -1,5 +1,4 @@
-import { animate, group, style, transition, trigger } from '@angular/animations';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-usage',
@@ -10,6 +9,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   ]
 })
 export class UsageComponent implements OnInit, OnDestroy {
+  playEvent = false;
   steps: string[] = [
     'Set your destination.',
     'Choose the most suitable option from the list of available.',
@@ -21,7 +21,7 @@ export class UsageComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    this.interval = setInterval(() => this.slide(), 3000);
+    this.interval = setInterval(() => this.slide(), 4000);
   }
 
   ngOnDestroy(): void {
@@ -35,17 +35,16 @@ export class UsageComponent implements OnInit, OnDestroy {
   slideNext() {
     clearInterval(this.interval);
     this.slide();
-    this.interval = setInterval(() => this.slide(), 3000);
+    this.interval = setInterval(() => this.slide(), 4000);
   }
 
   slidePrev() {
     clearInterval(this.interval);
     this.currentSlide = this.currentSlide > 0 ? this.currentSlide - 1 : this.steps.length - 1;
-    this.interval = setInterval(() => this.slide(), 3000);
+    this.interval = setInterval(() => this.slide(), 4000);
   }
 
   private slide() {
     this.currentSlide = this.currentSlide < this.steps.length - 1 ? this.currentSlide + 1 : 0;
   }
-
 }
