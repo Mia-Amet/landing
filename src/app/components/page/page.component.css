@@ -1,0 +1,18 @@
+app-pagination {
+  left: 0;
+  top: 40%;
+  z-index: 20;
+}
+
+app-features, app-estimate {
+  min-height: 400px;
+}
+
+.header-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  min-height: 700px;
+  background: #bac9cf;
+}
+
+/*# sourceMappingURL=page.component.css.map */

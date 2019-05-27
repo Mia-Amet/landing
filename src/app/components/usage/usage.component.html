@@ -1,0 +1,58 @@
+<div class="container-fluid m-0 p-0 d-flex justify-content-between align-items-center">
+  <div class="side-left d-flex flex-column">
+    <h1 class="text-white mb-5">how does bussr work?</h1>
+    <p class="text-white">We did our best making it simple and clean. Peace of mind is designed into your experience.</p>
+    <p class="text-white">Get 24/7 support in the app for any questions or safety concerns you might have.</p>
+    <button class="link-btn text-white bg-transparent border-0">
+      Sign Up for a Ride
+      <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 199.405 199.405" >
+        <g>
+          <polygon points="99.703,199.405 199.405,99.702 99.703,0 71.418,28.285 124.662,81.529 0,81.529 0,117.876 124.662,117.876 71.418,171.12 	"/>
+        </g>
+      </svg>
+    </button>
+  </div>
+  <!-- /.side-left -->
+  
+  <div class="slider d-flex align-items-start justify-content-center">
+    <div class="slide-wrapper position-absolute" *ngFor="let step of steps; let i = index">
+      <img [ngClass]="{ 'active': currentSlide === i }" class="slide" width="314"
+           [src]="getSlideUrl(i)" [alt]="steps[currentSlide]">
+    </div>
+    <img class="slider-placeholder" src="../../../assets/resources/screen-empty.png" width="500" alt="How does bussr work?">
+  </div>
+  <!-- /.slider -->
+  
+  <div class="side-right d-flex flex-column justify-content-between">
+    <div class="step" *ngFor="let step of steps; let i = index">
+      <div class="step-container" *ngIf="currentSlide === i">
+        <h4 class="text-white">step {{ i + 1 }}</h4>
+        <div class="divider"></div>
+        <!-- /.divider -->
+        <p class="text-white">{{ step }}</p>
+        
+        <div class="slider-controls mt-5">
+          <button class="mr-2 prev-btn bg-transparent border-0" (click)="slidePrev()">
+            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 199.404 199.404">
+              <g>
+                <polygon points="199.404,81.529 74.742,81.529 127.987,28.285 99.701,0 0,99.702 99.701,199.404 127.987,171.119 74.742,117.876 199.404,117.876 	"/>
+              </g>
+            </svg >
+          </button>
+          <button class="ml-2 next-btn bg-transparent border-0" (click)="slideNext()">
+            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 199.405 199.405" >
+              <g>
+                <polygon points="99.703,199.405 199.405,99.702 99.703,0 71.418,28.285 124.662,81.529 0,81.529 0,117.876 124.662,117.876 71.418,171.12 	"/>
+              </g>
+            </svg >
+          </button>
+        </div>
+        <!-- /.slider-controls -->
+      </div>
+    </div>
+    <!-- /.step -->
+  </div>
+  <!-- /.side-right -->
+  
+</div>
+<!-- /.container-fluid -->

@@ -1,0 +1,101 @@
+h1 {
+  font: 800 5.4em/100% "Montserrat", "Poppins", sans-serif;
+}
+
+h4 {
+  font: 600 2.4em/100% "Montserrat", "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font: 400 1.4em/180% "Poppins", "Montserrat", sans-serif;
+}
+
+.container-fluid {
+  background: rgba(85, 192, 204, 0.75) url("../../../assets/resources/644208-POO4RH-441.jpg") top left no-repeat;
+  background-size: auto 100%;
+  background-min-width: 1200px;
+  background-blend-mode: lighten;
+  min-height: 600px;
+}
+.container-fluid .side-left, .container-fluid .side-right {
+  width: 32%;
+}
+.container-fluid .side-left {
+  padding: 160px 0 160px 100px;
+}
+.container-fluid .side-right {
+  padding: 160px 100px 160px 0;
+}
+.container-fluid .slider {
+  padding: 140px 0 80px;
+}
+.container-fluid .slider .slider-placeholder {
+  left: -64px;
+}
+.container-fluid .slider .slide-wrapper {
+  top: 180px;
+  left: 74px;
+  overflow: hidden;
+}
+.container-fluid .slider .slide {
+  opacity: 0;
+}
+.container-fluid .slider .slide.active {
+  opacity: 1;
+}
+
+.link-btn {
+  outline: none;
+  padding: 10px 0;
+  width: max-content;
+  text-transform: uppercase;
+  font: 700 1.4em/100% "Raleway", "Montserrat", sans-serif;
+  transition: all 0.1s ease-out;
+}
+.link-btn svg {
+  margin-left: 4px;
+  padding-bottom: 3px;
+  transform: translateX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.link-btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: white;
+  height: 3px;
+  transition: width 0.4s ease, background-color 0.2s ease;
+}
+.link-btn:hover svg {
+  transform: translateX(2px);
+}
+.link-btn:hover:before {
+  content: "";
+  background-color: white;
+  width: 88%;
+}
+
+.divider {
+  width: 100%;
+  height: 4px;
+  background: white;
+  margin: 10px 0;
+}
+
+.prev-btn, .next-btn {
+  outline: none;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.prev-btn:hover, .next-btn:hover {
+  transform: scale(1.2);
+}
+
+.step-container {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=usage.component.css.map */
